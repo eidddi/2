@@ -14,11 +14,13 @@
     <div class="name-modal" id="nameModal">
         <div class="modal-content">
             <h3>Hey!</h3>
-            <form id="nameForm">
-                <input type="text" id="nameInput" placeholder="Enter your name please🥺" required>
-                <input type="hidden" id="timestamp">
-                <button type="submit">Submit</button>
-            </form>
+<form id="nameForm">
+  <input type="text" id="nameInput" placeholder="Enter your name please🥺" required>
+  <button type="submit" id="submitBtn">
+    <span id="buttonText">Submit</span>
+    <span id="loadingText" style="display:none;">Sending...</span>
+  </button>
+</form>
             <div id="honeypot" style="opacity: 0; position: absolute; left: -9999px;">
                 <input type="text" id="botCheck" name="botCheck">
             </div>
