@@ -575,3 +575,26 @@ body {
 .floating-star, .crescent-moon, .modal-content {
   will-change: transform, opacity;
 }
+
+/* Confetti */
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--gold);
+  animation: confettiFall 5s linear forwards;
+}
+
+@keyframes confettiFall {
+  to { transform: translateY(100vh) rotate(360deg); }
+}
+
+/* Loading state */
+#loadingText {
+  display: none;
+  color: var(--deep-blue);
+}
+
+#submitBtn:disabled {
+  opacity: 0.7;
+}
