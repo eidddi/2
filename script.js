@@ -1,5 +1,5 @@
 // Google Apps Script URL (use your deployed URL)
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwTXYBL89yYdqtPAKv-rtg68EdG0_Wt67-ajeIlL3ReWiocL8ukSMwVPCFRoGFEFZbN/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwoIPAccBuRcI0MOfNgPENmSK-E4TtKikKc4n_CPIJIX65tQVCw8L87qCeLy3tIDA_F/exec';
 
 // DOM Elements
 const nameModal = document.getElementById('nameModal');
