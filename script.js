@@ -1,6 +1,5 @@
 // ============== CONFIGURATION ==============
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwoIPAccBuRcI0MOfNgPENmSK-E4TtKikKc4n_CPIJIX65tQVCw8L87qCeLy3tIDA_F/exec';
-const SHEET_NAME = "Data"; // Tab name in your Google Sheet
 
 // ============== MAIN FUNCTIONS ==============
 
@@ -98,9 +97,8 @@ function playCelebrationSound() {
 
 // ============== INITIALIZATION ==============
 
-// On page load
 document.addEventListener('DOMContentLoaded', function() {
-  // 1. Check for name in URL
+  // Check for name in URL
   const urlParams = new URLSearchParams(window.location.search);
   const name = urlParams.get('name');
   
@@ -110,10 +108,10 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('nameModal').style.display = 'flex';
   }
 
-  // 2. Setup form submission
+  // Setup form submission
   document.getElementById('nameForm').addEventListener('submit', handleNameSubmit);
 
-  // 3. Setup scroll animations
+  // Scroll animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -126,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(el);
   });
 
-  // 4. Scroll indicator
+  // Scroll indicator
   document.querySelectorAll('.scroll-indicator').forEach(el => {
     el.addEventListener('click', () => {
       document.querySelector('.message-section').scrollIntoView({
