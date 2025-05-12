@@ -3,119 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Beautiful Eid Mubarak greetings">
-    <title>Eid Mubarak</title>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>Eid Greeting Card</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Special+Elite&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/loader.css">
 </head>
 <body>
-    <!-- Name Collection Modal -->
-    <div class="name-modal" id="nameModal">
-        <div class="modal-content">
-            <h3>Hey!</h3>
-<form id="nameForm">
-  <input type="text" id="nameInput" placeholder="Enter your name please🥺" required>
-  <button type="submit" id="submitBtn">
-    <span id="buttonText">Submit</span>
-    <span id="loadingText" style="display:none;">Sending...</span>
-  </button>
-</form>
-            <div id="honeypot" style="opacity: 0; position: absolute; left: -9999px;">
-                <input type="text" id="botCheck" name="botCheck">
+    <div class="loading-screen">
+<!--        <div class="moon-loader"></div>-->
+                <p class="loading-text">Moo-ving...</p>
+                <div class="cat">
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                    <div class="cat__segment"></div>
+                </div>
+    </div>
+
+    <div class="content">
+    </div>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide video-card">
+<!--
+                <video id="myVideo" muted autoplay playsinline loop oncontextmenu="return false" preload="auto">
+                    <source src="assets/video.mp4" type="video/mp4">
+                </video>
+                <img id="fallbackGif" src="assets/fallback.gif" style="display: none;" alt="Fallback animation"> 
+-->                <div class="swipe-hint">← Swipe</div>
+            </div>
+
+            <!-- Letter Card -->
+            <div class="swiper-slide letter-card">
+                <div class="letter-content">
+                    <p class="receiver-line">Hey <span id="receiver-name">Friend</span>,</p>
+                    <div id="letter-body" class="letter-body">
+                        Wishing you a blessed Eid filled with joy and prosperity!
+                    </div>
+                    <div id="read-more" class="read-more">...read more</div>
+                    <p class="closing-line">Yours,</p>
+                    <p id="sender-name" class="signature">Sender</p>
+                </div>
+                <div class="swipe-hint">← Swipe</div>
+            </div>
+
+            <!-- Payment Card -->
+            <div class="swiper-slide payment-card">
+                <div class="payment-content">
+                    <h3>Eid Mubarak!</h3>
+                        <div class="payment-options">
+                            <div id="bkash-option" class="payment-option">
+                                <div class="payment-icon"><i><img src="assets/ico/bkash.svg" alt=""></i></div>
+                                <h4>ঈদের চাঁদ আকাশে,<br> সালামি দিন বিকাশে</h4>
+                                <div class="payment-number-container">
+                                    <input type="text" id="bkash-number" class="payment-number-input" readonly>
+                                    <button class="copy-btn" onclick="copyPaymentNumber('bkash-number')">Copy</button>
+                                </div>
+                            </div>
+                            <div id="nagad-option" class="payment-option">
+                                <div class="payment-icon"><i><img src="assets/ico/nagad.svg" alt=""></i></div>
+                                <h4>Nagad</h4>
+                                <div class="payment-number-container">
+                                    <input type="text" id="nagad-number" class="payment-number-input" readonly>
+                                    <button class="copy-btn" onclick="copyPaymentNumber('nagad-number')">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                    <a href="../../" target="_blank" class="send-button">Make Card...</a>
+                    <div class="footer">
+                        <a href="#" class="contact-link">contact developer</a>
+                        <p class="copyright">© Raffu 2025. All Rights Reserved.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero" aria-labelledby="mainHeading">
-        <div class="hero-content">
-            <div class="hero-text">
-                <div class="eid-sticker">
-                    <span>Taqabbal Allahu Minna wa Minkum</span>
-                </div>
-                <h1 id="mainHeading">Eid Mubarak</h1>
-                <p class="hero-subtitle">May the divine blessings of Allah bring you hope, faith, and joy</p>
-            </div>
-            <div class="hero-graphics">
-                <div class="crescent-moon"></div>
-                <div class="floating-lantern"></div>
-                <div class="floating-star star-1"></div>
-                <div class="floating-star star-2"></div>
-                <div class="floating-star star-3"></div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
-    
-    <!-- Message Section -->
-    <section class="message-section" aria-labelledby="greetingHeading">
-        <div class="message-container">
-            <div class="message-header">
-                <h2 class="personal-greeting" id="greetingHeading">Dear <span id="friendName">Friend</span>,</h2>
-                <h3 class="eid-mubarak-text">Eid Mubarak!</h3>
-            </div>
-            
-            <div class="message-content">
-                <p class="eid-message">
-                    As the blessed month comes to an end, I pray that Allah accepts all your prayers and forgives all your faults. 
-                    May this Eid bring joy, happiness, and peace to you and your family.
-                </p>
-                
-                <div class="dua-container">
-                    <div class="dua-decoration"></div>
-                    <div class="dua">
-                        "May the blessings of Allah fill your life with happiness and open all the doors of success now and always."
-                    </div>
-                    <div class="dua-decoration"></div>
-                </div>
-                
-                <p class="eid-message">
-                    Wishing you a day filled with laughter, moments of love, the warmth of family, and the joy of friends. 
-                    May Allah bless you with health, wealth, and prosperity. Eid Mubarak!
-                    </br></br> - Raffsun
-                </p>
-            </div>
-            
-            <div class="ornamental-border"></div>
-        </div>
-        <div class="scroll-indicator" id="seee" color="black">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
-    
-    <!-- Full Page Contact Section -->
-    <section class="fullpage-contact">
-        <div class="contact-content">
-            <h1>ঈদের চাঁদ আকাশে🌙</br> সালামি দিন বিকাশে😌</h1>
-            
-            <!-- Large Salami Sticker -->
-            <div class="salami-container">
-                <img src="salami-icon.png" alt="Salami" class="salami-sticker">
-                <p class="salami-text">SALAMI PLEASE!!😃</p>
-            </div>
-            
-            <!-- Three Small Icons -->
-            <div class="small-icons">
-                <img src="icon1.png" alt="Icon 1">
-                <img src="icon2.png" alt="Icon 2">
-                <img src="icon3.png" alt="Icon 3">
-            </div>
-            
-            <!-- Phone Number Section -->
-            <div class="phone-section">
-                <h3 class="phone-number">01774994794</h3>
-                <button class="copy-button">copy number</button>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Confetti Container -->
-    <div id="confettiContainer" class="confetti"></div>
-    
-    <script src="script.js"></script>    
-    <script src="copy.js"></script>
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="assets/confetti.js"></script>
+    <script src="assets/script.js"></script>
+    <script>
+            const video = document.getElementById('myVideo');
+            const gif = document.getElementById('fallbackGif');
+
+            // If video can't be loaded or played
+            function showGifFallback() {
+                video.style.display = 'none';
+                gif.style.display = 'block';
+            }
+
+            // Extra check: fallback if video fails to start
+            video.addEventListener('error', showGifFallback);
+            video.addEventListener('stalled', showGifFallback);
+    </script>
 </body>
 </html>
